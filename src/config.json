@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "root",
+    "password": "dhevan007",
+    "database": "dasaran",
+    "host": "127.0.0.1",
+    "port": 3308,
+    "dialect": "mysql",
+    "jwt_secret": "secret"
+  },
+  "local": {
+    "username": "root",
+    "password": "dhevan007",
+    "database": "dasaran",
+    "host": "127.0.0.1",
+    "port": 3308,
+    "dialect": "mysql",
+    "jwt_secret": "secret"
+  },
+  "production": {
+    "username": "root",
+    "password": "dhevan007",
+    "database": "dasaran",
+    "host": "127.0.0.1",
+    "port": 3308,
+    "dialect": "mysql",
+    "jwt_secret": "secret"
+  }
+}
+
