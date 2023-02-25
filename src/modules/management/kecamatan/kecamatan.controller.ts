@@ -3,7 +3,6 @@ import { AppRequest } from '../../../typings/request';
 import { asyncHandler } from '../../core/helpers/asyncHandler';
 import { ResponseService } from '../../core/service/response.service';
 import ValidateService from '../../core/service/validate.service';
-import Kecamatan from './kecamatan.model';
 import { KecamatanRepository } from './kecamatan.repository';
 import { kecamatanCreateValidation } from './kecamatan.validation';
 
@@ -11,9 +10,9 @@ const KecamatanController = Router();
 KecamatanController.get(
   '/',
   asyncHandler(async (req: any, res: Response) => {
-    const KotaId = req.query.kotaId;
-    const data = await Kecamatan.findAll({ where: { KotaId } });
-    return ResponseService.success(res, data, 'Berhasil mengambil daftar Kecamatan', 'SUCCESS');
+    // const KotaId = req.query.kotaId;
+    // const data = await Kecamatan.findAll({ where: { KotaId } });
+    return ResponseService.success(res, null, 'Berhasil mengambil daftar Kecamatan', 'SUCCESS');
   }),
 );
 KecamatanController.get(

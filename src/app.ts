@@ -4,8 +4,6 @@ import express from 'express';
 import { resolve } from 'path';
 import 'reflect-metadata';
 import middlewareLoader from './middlewareLoader';
-import modelLoader from './modelLoader';
-import { sequelize } from './modules/core/config/database';
 import { ResponseService } from './modules/core/service/response.service';
 import ErrorType from './modules/core/type/errorType';
 import controllerLoader from './routeLoader';
@@ -35,7 +33,7 @@ class App {
   }
 
   public async listen() {
-    modelLoader(sequelize);
+    // modelLoader(sequelize);
     
     this.app.listen(this.app.get('port'), () => {
       const node_env = process.env.NODE_ENV;
